@@ -1,11 +1,10 @@
-import { Canvas } from '@react-three/fiber'
-import { Environment, Center } from '@react-three/drei';
+import { Canvas } from "@react-three/fiber";
+import { Environment, Center } from "@react-three/drei";
+import Shirt from "./Shirt";
+import Backdrop from "./Backdrop";
+import CameraRig from "./CameraRig";
 
-import Shirt from './Shirt';
-import Backdrop from './Backdrop';
-import CameraRig from './CameraRig';
-
-const CanvasModel = () => {
+const CanvasModel = ({ enableShirt }) => {
   return (
     <Canvas
       shadows
@@ -18,12 +17,10 @@ const CanvasModel = () => {
 
       <CameraRig>
         <Backdrop />
-        <Center>
-          <Shirt />
-        </Center>
+        <Center>{enableShirt && <Shirt />}</Center>
       </CameraRig>
     </Canvas>
-  )
-}
+  );
+};
 
-export default CanvasModel
+export default CanvasModel;
