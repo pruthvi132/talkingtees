@@ -17,6 +17,7 @@ html {
 
 .app {
   @apply relative w-full h-screen overflow-hidden;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,12 +29,22 @@ html {
 
 .home-content {
   @apply flex-1 xl:justify-center justify-start flex flex-col gap-10;
+  width: 50%;
 }
 
 .head-text {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
+  font-weight: bold;
+  font-size: 25px;
 }
-
+.text-pink {
+  color: rgb(248, 69, 212); /* Replace "red" with your desired color */
+}
+.text-white {
+  color: rgb(255, 255, 255); /* Replace "red" with your desired color */
+}
+.text-blue {
+  color: rgb(66, 248, 248); /* Replace "blue" with your desired color */
+}
 .download-btn {
   @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
 }
@@ -92,4 +103,23 @@ input[type="file"] {
 
 .sketch-picker > div:nth-child(3) {
   display: none !important;
+}
+.hero-content-details {
+  font-style: italic !important;
+  font-size: 10px;
+  color: aliceblue;
+}
+@media (max-width: 767px) {
+  .home-page {
+    width: 468px;
+    height: 324px;
+    display: block;
+    aspect-ratio: 1.4444444444444444 / 1;
+    background-image: url(./t.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    border-radius: 0px 0px 0px 0px;
+  }
 }
